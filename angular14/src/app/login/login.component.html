@@ -1,1 +1,18 @@
-<p>login works!</p>
+<mat-card>
+<mat-card-title>Login</mat-card-title>
+<mat-card-content>
+    <form class="example-form" #userForm = "ngForm" (submit)="authenticateUser(userForm.value)">
+        <mat-form-field appearance="fill">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" required ngModel value="" name ="Username">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+            <mat-label>password</mat-label>
+            <input matInput placeholder="Password" required ngModel type = "password" value="" name="password">
+        </mat-form-field>
+        <button mat-raised-button color="primary">Login</button>
+        <button mat-raised-button color="primary" (click)="registerUser">Register</button>
+    </form>
+</mat-card-content>
+</mat-card>
